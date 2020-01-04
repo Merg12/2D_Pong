@@ -28,6 +28,10 @@ public class PlayerControls : MonoBehaviour
         {
             vel.y = -speed;
         }
+        else
+        {
+            vel.y = 0;
+        }
         rb2d.velocity = vel;
 
         var pos = transform.position;
