@@ -26,7 +26,7 @@ public class PlayerControls : MonoBehaviour
         }
         else if(Input.GetKey(moveDown))
         {
-            vel.y = 0;
+            vel.y = -speed;
         }
         rb2d.velocity = vel;
 
