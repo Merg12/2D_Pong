@@ -12,11 +12,11 @@ public class BallControl : MonoBehaviour
         float rand = Random.Range(0,2);
         if(rand < 1)
         {
-            rb2d.AddForce(new Vector2(20, -15));
+            rb2d.AddForce(new Vector2(200, 0));
         }
         else
         {
-            rb2d.AddForce(new Vector2(-20, -15));
+            rb2d.AddForce(new Vector2(0, 0));
         }
     }
 
@@ -24,7 +24,7 @@ public class BallControl : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        Invoke("GoBall",2);
+        Invoke("GoBall",1);
     }
 
     void ResetBall()
