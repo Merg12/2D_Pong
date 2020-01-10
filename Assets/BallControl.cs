@@ -16,7 +16,7 @@ public class BallControl : MonoBehaviour
         }
         else
         {
-            rb2d.AddForce(new Vector2(0, 0));
+            rb2d.AddForce(new Vector2(-200, 0));
         }
     }
 
@@ -45,7 +45,7 @@ public class BallControl : MonoBehaviour
         {
             Vector2 vel;
             vel.x = rb2d.velocity.x;
-            vel.y = (rb2d.velocity.y / 2.0f) + (coll.collider.attachedRigidbody.velocity.y / 3.0f);
+            vel.y = (rb2d.velocity.y / 6.0f) + (coll.collider.attachedRigidbody.velocity.y / 3.0f);
             rb2d.velocity = vel;
         }
     }
