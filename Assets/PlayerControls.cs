@@ -43,6 +43,6 @@ public class PlayerControls : MonoBehaviour
         {
             pos.y = -boundY;
         }
-        transform.position = pos;
+        rb2d.transform.position = pos;
     }
 }
