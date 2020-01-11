@@ -7,7 +7,7 @@ public class PlayerControls : MonoBehaviour
     public KeyCode moveUp = KeyCode.W;
     public KeyCode moveDown = KeyCode.S;
     public float speed = 10.0f;
-    public float boundY = -0.18f;
+    public float boundY = 4.0f;
     private Rigidbody2D rb2d;
 
     // Start is called before the first frame update
@@ -34,7 +34,7 @@ public class PlayerControls : MonoBehaviour
         }
         rb2d.velocity = vel;
 
-        var pos = transform.position;
+        var pos = rb2d.transform.position;
         if(pos.y > boundY)
         {
             pos.y = boundY;
